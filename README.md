@@ -1,5 +1,6 @@
 # 推啊原生互动示例工程 - H5
 
+- [原生互动产品介绍](/docs/原生互动产品介绍.pdf)
 - [技术对接文档](/docs/TUIA-SDK.md)
 - [sdk更新记录](/docs/CHANGELOG.md)
 
