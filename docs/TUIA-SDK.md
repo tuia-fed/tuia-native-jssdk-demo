@@ -21,7 +21,7 @@ Tsdk.init({
   appKey: '加密的appid', // 系统分配
   slotId: '10000', // 系统分配
   deviceId: '123456', // 用户唯一身份标识
-  dom: '#index', // dom节点
+  dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init）
   env: 'dev', // 测试环境还是正式环境
   debug: false // 是否开启debug模式
 })
