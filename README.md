@@ -10,3 +10,7 @@
 ## 启动文件
 
 > npm run server
+
+## 在线预览链接
+
+- http://yun.dui88.com/h5-mami/short-link/test/index.html
