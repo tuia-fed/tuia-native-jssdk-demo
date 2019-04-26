@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "http-server ./demo"
   },
   "repository": {
     "type": "git",

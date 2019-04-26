@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" id="index">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>h5原生demo示例</title>
+  <style>
+    body {
+      text-align: center;
+      position: relative;
+      height: 600px;
+      background-color: #52ce28;
+    }
+    .dom {
+      height: 400px;
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      background-image: url('//yun.tuisnake.com/h5-mami/couponPrize/close.png');
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="index-html">
+    原生活动h5示例页面
+  </div>
+  <div class="dom">
+    <div class='close'></div>
+  </div>
+</body>
+</html>
+<script src="https://yun.tuisnake.com/h5-mami/short-link/v1/index.js"></script>
+<script>
+  var getparams = function (name) {
+   var regexS = "[\\?&]" + name + "=([^&#]*)";
+   var regex = new RegExp(regexS);
+   var results = regex.exec(location.href);
+
+   if (results === null) return "";
+   else return results[1];
+  }
+
+  var initCallback = function() {
+    alert('初始化完成的回调')
+  }
+
+  Tsdk.init({
+    appKey: "3qKwty87tP6VxztdZB3CWnT5aNty",
+    slotId: '270000',
+    deviceId: getparams('deviceId'),
+    dom: ".dom",
+    debug: true
+  });
+
+  // 在活动完成后会执行，这个回调
+  Tsdk.ready(initCallback)
+
+
+  var closeNode = document.getElementsByClassName('close')[0];
+  var domNode = document.getElementsByClassName('dom')[0];
+  closeNode.addEventListener('click', function() {
+    domNode.style.display = 'none'
+    // 调用tsdk的关闭事件，通知我们的活动做相应的改变
+    Tsdk.close()
+  })
+</script>
