@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tuia-fed/tuia-native-jssdk-demo#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "http-server": "^0.11.1"
   }
 }
