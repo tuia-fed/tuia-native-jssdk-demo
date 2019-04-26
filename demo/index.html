@@ -40,8 +40,10 @@
   </div>
 </body>
 </html>
+<!-- 引入sdk链接 -->
 <script src="https://yun.tuisnake.com/h5-mami/short-link/v1/index.js"></script>
 <script>
+  // 获取url参数
   var getparams = function (name) {
    var regexS = "[\\?&]" + name + "=([^&#]*)";
    var regex = new RegExp(regexS);
@@ -50,11 +52,14 @@
    if (results === null) return "";
    else return results[1];
   }
-
+  // sdk初始化要执行的回调，媒体（对接方）自己的业务代码
   var initCallback = function() {
     alert('初始化完成的回调')
   }
-
+  // 初始化sdk，会在dom节点中插入iframe标签来呈现我们的活动呢
+  // 请确保传入的dom节点的宽高不为0
+  // 请确保传入的dom节点不是动态创建的，（如果是，请在dom节点渲染之后在执行Tsdk.init方法）
+  // 如果需要sdk的链接动态插入，请确保在sdk加载完毕之后执行Tsdk.init方法
   Tsdk.init({
     appKey: "3qKwty87tP6VxztdZB3CWnT5aNty",
     slotId: '270000',
@@ -66,7 +71,7 @@
   // 在活动完成后会执行，这个回调
   Tsdk.ready(initCallback)
 
-
+  // 媒体（对接方）的业务代码，关闭活动。
   var closeNode = document.getElementsByClassName('close')[0];
   var domNode = document.getElementsByClassName('dom')[0];
   closeNode.addEventListener('click', function() {

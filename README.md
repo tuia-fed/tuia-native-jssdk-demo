@@ -3,6 +3,9 @@
 - [技术对接文档](/docs/TUIA-SDK.md)
 - [sdk更新记录](/docs/CHANGELOG.md)
 
+## 安装包
+
+> npm install
 
 ## 启动文件
 
