@@ -41,7 +41,7 @@
 </body>
 </html>
 <!-- 引入sdk链接 -->
-<script src="https://yun.tuisnake.com/h5-mami/short-link/v1/index.js"></script>
+<script src="https://yun.tuisnake.com/h5-mami/short-link/v1.1.1/index.js"></script>
 <script>
   // 获取url参数
   var getparams = function (name) {
@@ -56,7 +56,7 @@
   var initCallback = function() {
     alert('初始化完成的回调')
   }
-  // 初始化sdk，会在dom节点中插入iframe标签来呈现我们的活动呢
+  // 初始化sdk，会在dom节点中插入iframe标签来呈现我们的活动
   // 请确保传入的dom节点的宽高不为0
   // 请确保传入的dom节点不是动态创建的，（如果是，请在dom节点渲染之后在执行Tsdk.init方法）
   // 如果需要sdk的链接动态插入，请确保在sdk加载完毕之后执行Tsdk.init方法
