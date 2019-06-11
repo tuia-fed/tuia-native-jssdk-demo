@@ -15,3 +15,8 @@
 ## 在线预览链接
 
 - http://yun.dui88.com/h5-mami/short-link/test/index.html
+
+## 注意
+
+在对接新的sdk的同时，需要新建广告位，将新的appkey和solitid传过来。
+新的sdk将对应新的活动，不然会造成不出广告弹层的问题。
