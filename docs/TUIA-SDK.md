@@ -21,9 +21,9 @@ Tsdk.init({
   appKey: '加密的appid', // 系统分配
   slotId: '10000', // 系统分配
   deviceId: '123456', // 用户唯一身份标识
-  dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init）
-  env: 'dev', // 测试环境还是正式环境
-  debug: false // 是否开启debug模式
+  dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init)
+  debug: false, // 是否开启debug模式
+  userId: 'fgdfgdfg' // 用户id，用于对接虚拟奖品，确定用户身份
 })
 ```
 
@@ -56,7 +56,7 @@ Tsdk.init({
   deviceId: '123456', // 用户唯一身份标识
   dom: '#index', // dom节点
   debug: false, // 是否开启debug模式
-  env: 'prod' // 测试环境还是正式环境
+  userId: 'fgdfgdfg' // 用户id
 })
 ```
 
@@ -67,12 +67,13 @@ Tsdk.init({
 | deviceId |  否  | string | iamappkey | 用户唯一身份标识 |
 | dom | 是 | string | '.dom' | 媒体传入挂载点 |
 | debug |  否  | boolean | false | 是否开启debug模式 |
-| env |  否  | string | dev | 是否是测试环境 |
+| userId |  是  | string | 'dgfgdf' | 媒体用户 |
 
 
 说明：
   deviceId为用户的唯一标示，建议媒体传入，以免造成用户标示混乱，在为空的情况下，会自动根据规则生成。
-  env默认是正式环境
+  userId为媒体的自身用户，用户对接虚拟奖品，确定用户身份。
+  (如果用户体系中只存在userId或者deviceId, 两者传入相同的userId或者deviceId)
 
 ## 事件说明
 
