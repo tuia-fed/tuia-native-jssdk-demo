@@ -18,8 +18,8 @@
 
 ```
 Tsdk.init({
-  appKey: '加密的appid', // 系统分配 ()
-  slotId: '10000', // 系统分配
+  appKey: '加密的appid', // 系统分配 (在推啊后台‘我的媒体’获取appkey)
+  slotId: '10000', // 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) 
   deviceId: '123456', // 设备号
   dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init)
   debug: false, // 是否开启debug模式
@@ -51,8 +51,8 @@ Tsdk.on('error', function(err) {
 
 ```
 Tsdk.init({
-  appKey: '加密的appid', // 系统分配
-  slotId: '10000', // 系统分配
+  appKey: '加密的appid', // 系统分配 (在推啊后台‘我的媒体’获取appkey)
+  slotId: '10000', // 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId)
   deviceId: '123456', // 设备号
   dom: '#index', // dom节点
   debug: false, // 是否开启debug模式
@@ -62,8 +62,8 @@ Tsdk.init({
 
 | 参数名 | 必填 | 类型   | 示例值    | 描述               |
 | ------ | :--: | ------ | --------- | ------------------ |
-| appKey |  是  | string | iamappkey | 系统分配的加密字段 |
-| slotId |  是  | string | iamappkey | 系统分配的加密字段 |
+| appKey |  是  | string | iamappkey | 系统分配 (在推啊后台‘我的媒体’获取appkey) |
+| slotId |  是  | string | iamappkey | 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) |
 | deviceId |  是  | string | iamappkey | 设备号 |
 | dom | 是 | string | '.dom' | 媒体传入挂载点 |
 | debug |  否  | boolean | false | 是否开启debug模式 |
