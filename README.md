@@ -3,6 +3,7 @@
 - [原生互动产品介绍](/docs/原生互动产品介绍.pdf)
 - [技术对接文档](/docs/TUIA-SDK.md)
 - [sdk更新记录](/docs/CHANGELOG.md)
+- [常见问题及处理方法](/docs/qa.md)
 
 ## 安装包
 

@@ -18,7 +18,7 @@
 
 ```
 Tsdk.init({
-  appKey: '加密的appid', // 系统分配
+  appKey: '加密的appid', // 系统分配 ()
   slotId: '10000', // 系统分配
   deviceId: '123456', // 设备号
   dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init)
@@ -64,10 +64,10 @@ Tsdk.init({
 | ------ | :--: | ------ | --------- | ------------------ |
 | appKey |  是  | string | iamappkey | 系统分配的加密字段 |
 | slotId |  是  | string | iamappkey | 系统分配的加密字段 |
-| deviceId |  否  | string | iamappkey | 设备号 |
+| deviceId |  是  | string | iamappkey | 设备号 |
 | dom | 是 | string | '.dom' | 媒体传入挂载点 |
 | debug |  否  | boolean | false | 是否开启debug模式 |
-| userId |  是  | string | 'dgfgdf' | 媒体用户 |
+| userId |  是  | string | 'dgfgdf' | 媒体用户id |
 
 
 说明：
