@@ -1,12 +1,13 @@
 # 推啊（短链接）JS 说明文档
 
----
-
 ## 概述
 
 通过使用推啊（短链接）JS，媒体可在自身 H5 页面内载入推啊互动活动。
 
 ## 使用说明
+
+> 步骤零：确认是否可用
+请确保webview支持ES5语法，并且支持iframe。
 
 > 步骤一：引入 JS 文件
 
@@ -18,12 +19,12 @@
 
 ```
 Tsdk.init({
-  appKey: '加密的appid', // 系统分配 (在推啊后台‘我的媒体’获取appkey)
-  slotId: '10000', // 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) 
-  deviceId: '123456', // 设备号
-  dom: '#index', // dom节点（该dom节点必须要有宽高，确保该dom节点不是动态渲染的，如果是请在渲染之后在init)
-  debug: false, // 是否开启debug模式
-  userId: 'fgdfgdfg' // 用户id，用于对接虚拟奖品，确定用户身份
+  appKey: '加密的appid',  //  系统分配 (在推啊后台‘我的媒体’获取appkey)
+  slotId: '10000',       //  系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) 
+  deviceId: '123456',    //  设备号
+  dom: '#index',         //  dom节点（该dom节点必须要有宽高，确保在调用方法是该dom节点已存在与页面上)
+  debug: false,          //  选择是否开启debug模式
+  userId: 'fgdfgdfg'     //  用户id，用于对接虚拟奖品，确定用户身份
 })
 ```
 
@@ -31,11 +32,12 @@ Tsdk.init({
 
 ```
 Tsdk.ready(function() {
-  // 如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+  // 如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。
+  // 对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
 })
 ```
 
-> 步骤三：监听 error 事件处理执行过程中的错误信息
+> 步骤四：监听 error 事件处理执行过程中的错误信息
 
 ```
 Tsdk.on('error', function(err) {
@@ -51,12 +53,12 @@ Tsdk.on('error', function(err) {
 
 ```
 Tsdk.init({
-  appKey: '加密的appid', // 系统分配 (在推啊后台‘我的媒体’获取appkey)
-  slotId: '10000', // 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId)
-  deviceId: '123456', // 设备号
-  dom: '#index', // dom节点
-  debug: false, // 是否开启debug模式
-  userId: 'fgdfgdfg' // 用户id
+  appKey: '加密的appid',
+  slotId: '10000',
+  deviceId: '123456',
+  dom: '#index',
+  debug: false,
+  userId: 'fgdfgdfg'
 })
 ```
 
@@ -73,7 +75,7 @@ Tsdk.init({
 说明：
   deviceId为设备号，在为空的情况下，会自动根据规则生成。
   userId为媒体的自身用户，用于对接虚拟奖品，确定用户身份。
-  (如果用户体系中只存在userId或者deviceId, 两者传入相同的userId或者deviceId)
+  (如果用户体系中只存在userId或者deviceId, 两者传入相同的userId或者deviceId即可)
 
 ## 事件说明
 
@@ -108,17 +110,18 @@ JS 在初始化完毕的时候会触发
 > close
 
 ```
-## 说明：
-  由于我们的活动是用iframe的形式挂在你们的页面之中的，所以活动的关闭需要对接方来提供的
+由于推啊互动活动是用iframe的形式挂在页面之中的，所以活动的关闭需要对接方来提供的
 
 在触发媒体（对接方的关闭事件的时候）请调用
-Tsdk.close() 来告知我们。
+Tsdk.close() 来告知sdk。
 ```
 
 ## 常见错误及解决方法
 在jssdk中报错会触发error事件，
+```
 Tsdk.on('error', function(err) {
   // 这里会将错误信息捕获
 })
+```
 调用 init 接口的时候传入参数 debug: true 可以开启 debug 模式，页面会出现调试工具。
 debug所需模块会异步加载到页面。
