@@ -21,7 +21,7 @@
 Tsdk.init({
   appKey: '加密的appid',  //  系统分配 (在推啊后台‘我的媒体’获取appkey)
   slotId: '10000',       //  系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) 
-  deviceId: '123456',    //  设备号
+  deviceId: '123456',    //  此信息将有利于我们对于用户的精准识别，从而推荐更优质合适的广告，从而有助于提升媒体收益。
   dom: '#index',         //  dom节点（该dom节点必须要有宽高，确保在调用方法是该dom节点已存在与页面上)
   debug: false,          //  选择是否开启debug模式
   userId: 'fgdfgdfg'     //  用户id，用于对接虚拟奖品，确定用户身份
@@ -66,7 +66,7 @@ Tsdk.init({
 | ------ | :--: | ------ | --------- | ------------------ |
 | appKey |  是  | string | iamappkey | 系统分配 (在推啊后台‘我的媒体’获取appkey) |
 | slotId |  是  | string | iamappkey | 系统分配的广告位Id (在推啊后台‘我的广告位’获取slotId) |
-| deviceId |  是  | string | iamappkey | 设备号 |
+| deviceId |  是  | string | iamappkey | 此信息将有利于我们对于用户的精准识别，从而推荐更优质合适的广告，从而有助于提升媒体收益。 |
 | dom | 是 | string | '.dom' | 媒体传入挂载点 |
 | debug |  否  | boolean | false | 是否开启debug模式 |
 | userId |  是  | string | 'dgfgdf' | 媒体用户id |

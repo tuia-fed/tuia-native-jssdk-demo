@@ -10,7 +10,10 @@
       text-align: center;
       position: relative;
       height: 600px;
-      background-color: #52ce28;
+      background-color: transparent;
+    }
+    html {
+      background-color: transparent;
     }
     .dom {
       height: 400px;
@@ -26,7 +29,7 @@
       right: 0;
       width: 30px;
       height: 30px;
-      background-image: url('//yun.tuisnake.com/h5-mami/couponPrize/close.png');
+      background-image: url('https://yun.tuisnake.com/h5-mami/couponPrize/close.png');
       background-size: 100% 100%;
     }
   </style>
@@ -54,7 +57,7 @@
   }
   // sdk初始化要执行的回调，媒体（对接方）自己的业务代码
   var initCallback = function() {
-    alert('初始化完成的回调')
+    // alert('初始化完成的回调')
   }
   // 初始化sdk，会在dom节点中插入iframe标签来呈现我们的活动
   // 请确保传入的dom节点的宽高不为0
