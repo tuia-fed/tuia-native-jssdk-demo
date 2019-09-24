@@ -116,6 +116,15 @@ JS 在初始化完毕的时候会触发
 Tsdk.close() 来告知sdk。
 ```
 
+## 额外的JS API
+如果在引用JSSDK的页面注入jsapi, 在特定的时候优先去调用它。（该方法需要媒体注入在页面内，供JSSDK调用）
+
+1、需要新打开页面时（例如：跳转我的奖品页，跳转广告落地页）。
+```
+  window.TAHandler.openUrl(JSON)
+    JSON <string> "{'url': '//www.tuia.cn'}"
+```
+
 ## 常见错误及解决方法
 在jssdk中报错会触发error事件，
 ```
