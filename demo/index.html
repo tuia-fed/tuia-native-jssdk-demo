@@ -74,12 +74,8 @@
   // 在活动完成后会执行，这个回调
   Tsdk.ready(initCallback)
 
-  // 媒体（对接方）的业务代码，关闭活动。
-  var closeNode = document.getElementsByClassName('close')[0];
-  var domNode = document.getElementsByClassName('dom')[0];
-  closeNode.addEventListener('click', function() {
-    domNode.style.display = 'none'
-    // 调用tsdk的关闭事件，通知我们的活动做相应的改变
-    Tsdk.close()
+  // 活动关闭，通知媒体
+  Tsdk.on('tuia:close', () => {
+    alert('活动关闭');
   })
 </script>
